@@ -3,6 +3,7 @@
 {{ $posts_len := len (where (where $.Data.Pages "Type" "post") ".Params.notonhomepage" nil) }}
 
 <!-- Blog Posts widget -->
+
 <div class="row">
   <div class="col-xs-12 col-md-4 section-heading">
 
@@ -20,6 +21,9 @@
   </div>
   <div class="col-xs-12 col-md-8">
 
+<!-- start feedwind code --> <script type="text/javascript" src="https://feed.mikle.com/js/fw-loader.js" data-fw-param="9113/"></script> <!-- end feedwind code -->
+    <!--
+
     {{ with $page.Content }}<p>{{ . | markdownify }}</p>{{ end }}
 
     {{ if $page.Params.tags }}
@@ -33,6 +37,7 @@
         {{ partial "post_li" $params }}
       {{ end }}
     {{ end }}
-
+    -->
   </div>
 </div>
+
