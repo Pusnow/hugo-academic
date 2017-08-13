@@ -11,6 +11,7 @@
     {{ with $page.Params.subtitle }}<p>{{ . | markdownify }}</p>{{ end }}
     <p class="view-all">
       <a href="https://medium.com/@Pusnow"  target="_blank">
+<!--><a href="{{ "/post/" | relLangURL }}"> -->
         {{ i18n "more_posts" | markdownify }}
         <i class="fa fa-angle-double-right"></i>
       </a>
